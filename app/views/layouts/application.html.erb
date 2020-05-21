@@ -12,6 +12,23 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <h1 style="color:white">Mister Cocktail</h1>
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <p><%= link_to "Add a coktail", new_cocktail_path, class: 'btn btn-ghost'%></p>
+      </li>
+    </ul>
+  </div>
+</div>
     <%= yield %>
   </body>
 </html>

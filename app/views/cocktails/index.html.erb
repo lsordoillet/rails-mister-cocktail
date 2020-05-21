@@ -1,13 +1,18 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
   <div class="container">
-    <h1> Mister Cocktail 🍹</h1>
-    <p><%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn btn-ghost'%></p>
+    <h1> It's Cocktail Time🍹</h1>
   </div>
 </div>
 <div class="container">
     <% @cocktails.each do |cocktail| %>
-       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+       <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a><%= link_to "See cocktail", cocktail_path(cocktail) %></a>
+  </div>
+
     </div>
   <% end %>
 </div>
