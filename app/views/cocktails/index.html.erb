@@ -1,11 +1,14 @@
-<h1> Cocktails 🍹</h1>
-
-<div>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
+  <div class="container">
+    <h1> Mister Cocktail 🍹</h1>
+    <p><%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn btn-ghost'%></p>
+  </div>
+</div>
+<div class="container">
+    <% @cocktails.each do |cocktail| %>
+       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </div>
   <% end %>
-</ul>
 </div>
 
- <p><%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn btn-primary'%></p>
